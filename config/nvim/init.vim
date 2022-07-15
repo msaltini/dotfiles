@@ -8,7 +8,7 @@ call plug#begin()
  Plug 'kyazdani42/nvim-web-devicons' " for file icons
  Plug 'nvim-lualine/lualine.nvim'
  Plug 'junegunn/fzf'
- "Plug 'sheerun/vim-polyglot'
+ Plug 'sheerun/vim-polyglot'
  "Plug 'ludovicchabant/vim-gutentags'
  Plug 'justinmk/vim-syntax-extra'
  "Plug 'bfrg/vim-cpp-modern'

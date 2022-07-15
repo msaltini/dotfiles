@@ -1,0 +1,96 @@
+! One-Half-Dark Xresources palette
+! special
+*.foreground:   #dcdfe4
+*.background:   #282c34
+*.cursorColor:  #dcdfe4
+
+! black
+*.color0:       #282c34
+*.color8:       #282c34
+
+! red
+*.color1:       #e06c75
+*.color9:       #e06c75
+
+! green
+*.color2:       #98c379
+*.color10:      #98c379
+
+! yellow
+*.color3:       #e5c07b
+*.color11:      #e5c07b
+
+! blue
+*.color4:       #61afef
+*.color12:      #61afef
+
+! magenta
+*.color5:       #c678dd
+*.color13:      #c678dd
+
+! cyan
+*.color6:       #56b6c2
+*.color14:      #56b6c2
+
+! white
+*.color7:       #dcdfe4
+*.color15:      #dcdfe4
+
+! ! Dracula Xresources palette
+!special
+!*.foreground: #F8F8F2
+!*.background: #282A36
+!
+! black
+!*.color0:     #000000
+!*.color8:     #4D4D4D
+!
+! red
+!*.color1:     #FF5555
+!*.color9:     #FF6E67
+!
+! green
+!*.color2:     #50FA7B
+!*.color10:    #5AF78E
+!
+! yellow
+!*.color3:     #F1FA8C
+!*.color11:    #F4F99D
+!
+! blue
+!*.color4:     #BD93F9
+!*.color12:    #CAA9FA
+!
+! magenta
+!*.color5:     #FF79C6
+!*.color13:    #FF92D0
+!
+! cyan
+!*.color6:     #8BE9FD
+!*.color14:    #9AEDFE
+!
+! white
+!*.color7:     #BFBFBF
+!*.color15:    #E6E6E6
+!
+URxvt.scrollBar: false
+URxvt.font: xft:Iosevka Nerd Font Mono:size=11:autohint=true
+
+! disable weired shit that prevents copy paste
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+! set copy-paste shortcuts
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+!allow scrolling in buffers
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: false
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+!make urxvt real transparent
