@@ -1,14 +1,18 @@
 set nocompatible
 call plug#begin()
  Plug 'sonph/onehalf', { 'rtp': 'vim' }
+ Plug 'norcalli/nvim-colorizer.lua'
 " Plug 'SirVer/ultisnips'
- Plug 'preservim/nerdtree'
+ "Plug 'preservim/nerdtree'
  Plug 'mhinz/vim-startify'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'kyazdani42/nvim-web-devicons' " for file icons
+ Plug 'kyazdani42/nvim-tree.lua'
  Plug 'nvim-lualine/lualine.nvim'
  Plug 'junegunn/fzf'
  Plug 'sheerun/vim-polyglot'
+ Plug 'godlygeek/tabular'
+ Plug 'preservim/vim-markdown'
  "Plug 'ludovicchabant/vim-gutentags'
  Plug 'justinmk/vim-syntax-extra'
  "Plug 'bfrg/vim-cpp-modern'
@@ -44,7 +48,7 @@ nnoremap <C-s> :wq<CR>
 "Exit file without saving
 nnoremap <C-q> :q!<CR>
 "Toggle NERDTree using ctrl + n
-nnoremap <C-n> :NERDTreeToggle<CR>  
+nnoremap <C-n> :NvimTreeToggle<CR>  
 "Toogle fuzzy file finder wit ctrl+f
 nnoremap <C-f> :FZF<CR>
 "Toggle tagbar with ctrl+t
@@ -53,6 +57,6 @@ nnoremap <C-t> :TagbarToggle<CR>
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif 
 "Setup the bar line
 lua require('lualine').setup() 
-
-set termguicolors " this variable must be enabled for colors to be applied properly
+lua require('colorizer').setup()
+lua require('nvim-tree').setup()
 

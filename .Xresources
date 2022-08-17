@@ -74,7 +74,7 @@
 !*.color15:    #E6E6E6
 !
 URxvt.scrollBar: false
-URxvt.font: xft:Iosevka Nerd Font Mono:size=11:autohint=true
+URxvt*font: xft:Iosevka\ Nerd\ Font\ Mono:size=11:autohint=true
 
 ! disable weired shit that prevents copy paste
 URxvt.iso14755: false
@@ -83,6 +83,12 @@ URxvt.iso14755_52: false
 ! set copy-paste shortcuts
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+! add ctrl+alt keybinds
+URxvt.keysym.Control-Up:     \033[1;5A
+URxvt.keysym.Control-Down:   \033[1;5B
+URxvt.keysym.Control-Left:   \033[1;5D
+URxvt.keysym.Control-Right:  \033[1;5C
 
 !allow scrolling in buffers
 ! do not scroll with output
@@ -94,3 +100,5 @@ URxvt*scrollTtyKeypress: true
 URxvt.secondaryScreen: 1
 URxvt.secondaryScroll: 0
 !make urxvt real transparent
+!
+Xcursor.size: 16
