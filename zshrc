@@ -1,0 +1,2 @@
+source <(fzf --zsh)
+eval "$(starship init zsh)"
